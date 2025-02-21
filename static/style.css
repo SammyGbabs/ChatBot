@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-700: #047857;
+  --color-emerald-600: #059669;
+  --color-emerald-900: #064e3b;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-600: #4b5563;
+  --color-gray-800: #1f2937;
+  --color-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Landing Page Styles */
+.bg-gradient {
+  background: linear-gradient(135deg, var(--color-emerald-50), var(--color-emerald-100));
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.logo {
+  display: inline-flex;
+  background-color: var(--color-emerald-700);
+  padding: 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+
+.logo i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--color-emerald-900);
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--color-emerald-700);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.how-it-works {
+  max-width: 64rem;
+  margin: 0 auto 3rem;
+  background: var(--color-white);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background: var(--color-emerald-700);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header h2 {
+  color: var(--color-white);
+  font-size: 1.875rem;
+}
+
+.header i {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-white);
+}
+
+.features {
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.feature {
+  background: var(--color-emerald-50);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.feature-icon i {
+  background: var(--color-emerald-700);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-white);
+}
+
+.feature h3 {
+  color: var(--color-emerald-900);
+  font-size: 1.25rem;
+}
+
+.feature p {
+  color: var(--color-emerald-700);
+}
+
+.start-button {
+  text-align: center;
+}
+
+.start-button button {
+  background: var(--color-emerald-700);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.start-button button:hover {
+  background: var(--color-emerald-600);
+  transform: scale(1.05);
+}
+
+/* Chat Interface Styles */
+#chat-interface {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--color-emerald-50), var(--color-emerald-100));
+}
+
+.chat-header {
+  background: var(--color-emerald-700);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.chat-title i {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-white);
+}
+
+.chat-title h1 {
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+#back-button {
+  background: var(--color-emerald-600);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+#back-button:hover {
+  background: var(--color-emerald-600);
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 80%;
+}
+
+.message.user {
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.message-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message.bot .message-avatar {
+  background: var(--color-gray-200);
+}
+
+.message.user .message-avatar {
+  background: var(--color-emerald-700);
+}
+
+.message-avatar i {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.message.bot .message-avatar i {
+  color: var(--color-gray-600);
+}
+
+.message.user .message-avatar i {
+  color: var(--color-white);
+}
+
+.message-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.message-content {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  max-width: calc(100% - 3rem);
+}
+
+.message.bot .message-content {
+  background: var(--color-white);
+  color: var(--color-gray-800);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.message.user .message-content {
+  background: var(--color-emerald-700);
+  color: var(--color-white);
+}
+
+.message-timestamp {
+  font-size: 0.75rem;
+  color: var(--color-gray-400);
+  margin-top: 0.25rem;
+}
+
+.message.user .message-timestamp {
+  text-align: right;
+}
+
+.chat-form {
+  padding: 1rem;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-gray-200);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.chat-form input:focus {
+  border-color: var(--color-emerald-700);
+  box-shadow: 0 0 0 2px rgba(4, 120, 87, 0.2);
+}
+
+.chat-form button {
+  background: var(--color-emerald-700);
+  color: var(--color-white);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.chat-form button:hover {
+  background: var(--color-emerald-600);
+}
+
+.chat-form button i {
+  width: 1.25rem;
+  height: 1.25rem;
+}

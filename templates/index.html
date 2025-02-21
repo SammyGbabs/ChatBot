@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrosage - Your Agricultural Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="landing-page" class="min-h-screen bg-gradient">
+    <div class="container">
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="logo">
+          <i data-lucide="sprout"></i>
+        </div>
+        <h1>Welcome to Agrosage</h1>
+        <p>Your intelligent agricultural assistant, ready to provide expert guidance and answers to all your farming questions</p>
+      </div>
+
+      <!-- How It Works Section -->
+      <div class="how-it-works">
+        <div class="header">
+          <i data-lucide="brain"></i>
+          <h2>How to Use Agrosage</h2>
+        </div>
+        
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">
+              <i data-lucide="message-square"></i>
+              <h3>Ask Questions</h3>
+            </div>
+            <p>Type your agricultural questions in natural language. Ask about crop management, pest control, soil health, and more.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">
+              <i data-lucide="leaf"></i>
+              <h3>Get Expert Advice</h3>
+            </div>
+            <p>Receive detailed, practical advice based on agricultural science and best practices in farming.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Button -->
+      <div class="start-button">
+        <button id="start-chat">
+          Start Chatting with Agrosage
+          <i data-lucide="arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="chat-interface" class="hidden">
+    <div class="chat-header">
+      <div class="chat-title">
+        <i data-lucide="bot"></i>
+        <h1>Agrosage</h1>
+      </div>
+      <button id="back-button">
+        Back to Home
+      </button>
+    </div>
+
+    <div id="messages" class="messages"></div>
+
+    <form id="chat-form" class="chat-form">
+      <input 
+        type="text" 
+        id="user-input" 
+        placeholder="Ask Agrosage anything about agriculture..."
+        required
+      >
+      <button type="submit">
+        <i data-lucide="send"></i>
+      </button>
+    </form>
+  </div>
+
+  <script type="module" src="/static/main.js"></script>
+</body>
+</html>
