@@ -75,7 +75,7 @@ function addMessage(message) {
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
-function handleUserMessage(content) {
+async function handleUserMessage(content) {
   // Add user message with current timestamp
   const userMessage = {
     type: 'user',
@@ -84,15 +84,35 @@ function handleUserMessage(content) {
   };
   addMessage(userMessage);
 
-  // Simulate bot response with a delay
-  setTimeout(() => {
+  try {
+    // Send user message to FastAPI backend
+    const response = await fetch('http://127.0.0.1:8000/predict', {  // Change URL to your FastAPI server's URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ input: content })
+    });
+    
+    const data = await response.json();
+
+    // Simulate bot response after receiving the response from FastAPI
     const botMessage = {
       type: 'bot',
-      content: "Thank you for your message. I'm a demo chatbot interface. In a real implementation, I would process your query and provide agricultural advice.",
+      content: data.response || "Sorry, I couldn't process your message.",
       timestamp: new Date()
     };
     addMessage(botMessage);
-  }, 1000);
+  } catch (error) {
+    console.error('Error sending request:', error);
+    // Handle error scenario
+    const botMessage = {
+      type: 'bot',
+      content: "Oops! Something went wrong. Please try again later.",
+      timestamp: new Date()
+    };
+    addMessage(botMessage);
+  }
 }
 
 // Event listeners
