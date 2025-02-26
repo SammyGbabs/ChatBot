@@ -70,7 +70,7 @@ To run the chatbot, follow these steps:
 ![User Query](/images/query.png)  
 
 ### Chatbot Response  
-![Chatbot Response](/images/response.pngresponse.png)  
+![Chatbot Response](/images/response.png)  
 
 _The images above showcase a sample conversation between the user and the AgroSage chatbot._
 
