@@ -51,13 +51,13 @@ To run the chatbot, follow these steps:
 1. **Install dependencies:**
 
    ```bash
-   pip install transformers datasets torch sentence-transformers nltk flask
+   pip install transformers datasets torch sentence-transformers nltk FASTAPI
    ```
 
-2. **Run the Flask application:**
+2. **Run the FastApi application:**
 
    ```bash
-   python app.py
+   uvicorn app:app --host 0.0.0.0 --port 8000 --reload
    ```
 
 3. **Open the frontend in a browser:**
@@ -76,11 +76,13 @@ _The images above showcase a sample conversation between the user and the AgroSa
 
 ## Handling Unknown Queries
 
-If a user asks a question that is not part of the training dataset, the chatbot responds with:
+If a user asks a question outside the main domain (which is agriculture), the chatbot responds with:
 
 > "Sorry, I don't understand that question."
 
-This ensures that the model does not provide misleading or incorrect information.
+However, the model is equipped with semantic search capabilities. Even if the user asks a question not explicitly present in the training dataset, the model will perform a search within the dataset to find related terms and concepts. If relevant keywords are identified, the model will provide an associated response based on similar queries in the dataset.
+
+This approach ensures that even questions outside the exact training data can still receive meaningful and contextually relevant responses
 
 ## Conclusion
 
