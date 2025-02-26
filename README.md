@@ -66,13 +66,13 @@ To run the chatbot, follow these steps:
 
 ## Example Conversations
 
-**User:** "What is the best way to grow tomatoes in a humid climate?"
+### User Query  
+![User Query](/images/query.png)  
 
-**AgroSage:** "Tomatoes thrive in well-drained soil with adequate spacing. To prevent fungal infections, ensure good air circulation and use resistant varieties."
+### Chatbot Response  
+![Chatbot Response](/images/response.pngresponse.png)  
 
-**User:** "How can I improve my soil fertility?"
-
-**AgroSage:** "Use organic compost, practice crop rotation, and apply nitrogen-fixing plants like legumes to enhance soil nutrients."
+_The images above showcase a sample conversation between the user and the AgroSage chatbot._
 
 ## Handling Unknown Queries
 
@@ -91,4 +91,3 @@ AgroSage has demonstrated **exceptional performance** in responding to agricultu
 For further improvements, contributions, or feedback, feel free to reach out!
 
 **Developed by:** Babalola Samuel
-
